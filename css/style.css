@@ -66,6 +66,7 @@ html {
 }
 
 header {
+    z-index: 10;
     position: sticky;
     top: 0;
 }
@@ -460,6 +461,74 @@ footer a.social:hover {
     padding: 2rem;
 }
 
+.projectDisplay {
+    display: grid;
+    grid-row-gap: 30px;
+    grid-column-gap: 20px;
+    justify-items: center;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.featuredProjects {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: block;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.featuredProjects img {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: block;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.middle {
+    position: absolute;
+    transition: .5s ease;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.featuredProjects:hover img {
+    opacity: 0.2;
+}
+
+.featuredProjects:hover .middle {
+    opacity: 1;
+}
+
+.text {
+    color: #171717;
+    font-size: 16px;
+    padding: 16px 16px;
+    opacity: 1;
+}
+
+.btn-index-project {
+    font-size: 1rem;
+    letter-spacing: .1rem;
+    line-height: 1.5;
+    border-radius: 200px;
+    background-color: transparent;
+    color: #646363;
+    border: 1px #646363 solid;
+    margin-top: 10px;
+    transition: all 0.5s;
+
+}
+
 /* Grid homepage */
 .index_featured {
     display: grid;
@@ -609,6 +678,116 @@ footer a.social:hover {
     margin-bottom: 5rem;
 }
 
+/* Projects Page */
+/* Project2024 */
+.project2024 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: 15px;
+    grid-column-gap: 20px;
+    justify-content: center;
+    justify-items: center;
+}
+
+.project2024mockup {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 15px;
+    grid-column-gap: 20px;
+    justify-content: center;
+    justify-items: center;
+}
+
+.project2024_title {
+    max-width: 100%;
+    padding-bottom: 30px;
+}
+
+.project2024_text {
+    padding-left: 20px;
+    padding-right: 20px;
+    grid-column: 1/-1;
+}
+
+.project2024 img {
+    padding-top: 30px;
+    max-width: 100%;
+}
+
+.project2024mockup img {
+    padding-top: 30px;
+    max-width: 100%;
+}
+
+.project2024_calendar {
+    max-width: 100%;
+}
+
+.poster1,
+.poster2,
+.poster3{
+    max-width: 100%;
+    padding-bottom: 30px;
+}
+.poster2 {
+    grid-row:1/4;
+    grid-column:2;
+}
+
+
+/* Projectstudio */
+
+.projectstudio {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    justify-items: center;
+}
+
+.projectstudio_text h3 {
+    margin: bottom 0px;
+    padding-bottom: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 20px;
+}
+
+.projectstudio_text h4 {
+    padding: 20px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.projectstudio_text h2 {
+    padding: 0px;
+    margin: 30px;
+}
+
+.projectstudio_section2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 15px;
+    grid-column-gap: 20px;
+    justify-content: center;
+    justify-items: center;
+}
+
+.projectstudio_section2 img:nth-child(6) {
+    grid-column: 1/-1;
+}
+
+.projectstudio img {
+    padding-top: 30px;
+    max-width: 100%;
+}
+
+.studio_section1_img {
+    display: none;
+}
+
+
+
+
 /* Second Breakpoint: Small screen view*/
 @media only screen and (min-width: 576px) {
     .navbar {
@@ -636,6 +815,12 @@ footer a.social:hover {
         font-size: 5.625rem;
         font-weight: 400;
     }
+
+    .featuredProjects img {
+        width:100%;
+
+    }
+
 
     /* gallery */
     .galleryCategory {
@@ -686,6 +871,86 @@ footer a.social:hover {
     .gd10 {
         grid-column: 3/-1;
     }
+
+
+    .project2024poster {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 15px;
+        grid-column-gap: 20px;
+        justify-content: center;
+        justify-items: center;
+    }
+
+    .poster2 {
+        width: auto;
+        height: auto;
+        padding-bottom: 30px;
+    }
+    .featuredProjects{
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    /* SIYUKATH STUDIO */
+    .projectstudio {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        justify-items: center;
+        grid-row-gap: 0px;
+        grid-column-gap: 0px;
+    }
+
+    .projectstudio img {
+        padding-top: 0px;
+        max-width: 100%;
+    }
+
+    .studio_mockup_group,
+    .studio_style_guide {
+        grid-column: 1/-1;
+        padding: 5rem;
+    }
+
+    .projectstudio_text h4 {
+        padding: 0px;
+        margin: 30px;
+    }
+
+    .studio_section1_img {
+        display: inline-block;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .projectstudio_section2 img:nth-child(1),
+    .projectstudio_section2 img:nth-child(2) {
+        grid-column: 1/-1;
+    }
+    .projectstudio_section2 {
+        grid-row-gap: 30px;
+        grid-column-gap: 40px;
+    
+    }
+    .projectstudio_section3 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 30px;
+        grid-column-gap: 40px;
+        justify-content: center;
+        justify-items: center;
+    }
+
+    .projectstudio_section3 img:nth-child(2) {
+        grid-column: 1/-1;
+        grid-row: 1;
+    }
+
+    .projectstudio_section3 img:nth-child(1) {
+        grid-row: 2/5;
+    }
+
 }
 
 
@@ -712,10 +977,41 @@ footer a.social:hover {
     .aboutDisplay {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-row-gap: 30px;
+        grid-row-gap: 10px;
         grid-column-gap: 50px;
         justify-content: center;
         justify-items: center;
+    }
+
+    .projectDisplay {
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 10px;
+        grid-column-gap: 50px;
+        justify-content: center;
+        justify-items: center;
+      
+    }
+
+
+    .featuredProjects{
+        padding:0px;
+        width: auto;
+    }
+    .featuredProjects img {
+    
+  
+        padding-bottom: 50px;
+    }
+
+    .beijingsubway{
+        grid-column: 1/-1;
+    }
+
+    .projectDisplay h3,
+    h4,
+    p {
+        grid-column: 1/-1;
+
     }
 
     .aboutDisplay h3,
@@ -768,6 +1064,21 @@ footer a.social:hover {
         grid-column: 3/-1;
     }
 
+    .projectstudio_text h2,
+    .projectstudio_text h4 {
+        font-size: 24px;
+        padding: 50px;
+        margin: 30px;
+    }
+
+    .studio_mockup_group,
+    .studio_style_guide {
+        padding: 10rem;
+    }
+
+
+
+
 }
 
 /* for reduced motion */
@@ -787,4 +1098,5 @@ footer a.social:hover {
     .rollIn {
         animation: none;
     }
+
 }
